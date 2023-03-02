@@ -47,7 +47,6 @@ int main()
         default:
             break;
         }
-        cout << "Num of Elements: " << numOfElements << endl;
     }
 }
 
