@@ -71,6 +71,8 @@ int removeLocation(int* xValues, int* yValues, int numOfElements){
     cout << "Which location would you like to remove? " << endl; 
     
     cin >> userInput; 
+    int x = xValues[userInput-1];
+    int y = yValues[userInput-1]; 
     //I THINNK IT WORKS NOW
     if(userInput == numOfElements){
         xValues[userInput+1]=0;
@@ -82,6 +84,7 @@ int removeLocation(int* xValues, int* yValues, int numOfElements){
         }
     }
     numOfElements--;
+    cout << "Location " << x << ", " << y << " has been removed from memory!" << endl; 
     return numOfElements; 
 }
 
