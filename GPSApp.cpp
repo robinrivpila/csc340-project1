@@ -69,13 +69,19 @@ int removeLocation(int* xValues, int* yValues, int numOfElements){
     cout << "The following locations are stored: " << endl; 
     showStoredLocations(xValues, yValues, numOfElements); 
     cout << "Which location would you like to remove? " << endl; 
-    numOfElements--;
+    
     cin >> userInput; 
-    //THIS IS NOT WORKING PROPERLY
-    for(int i = userInput; i < numOfElements; i++){
-        xValues[userInput-1]= xValues[userInput];  
-        yValues[userInput-1]= yValues[userInput]; 
+    //I THINNK IT WORKS NOW
+    if(userInput == numOfElements){
+        xValues[userInput+1]=0;
+        yValues[userInput+1]=0;
+    }else{
+        for(int i = userInput; i < numOfElements; i++){
+        xValues[i-1]= xValues[i];  
+        yValues[i-1]= yValues[i]; 
+        }
     }
+    numOfElements--;
     return numOfElements; 
 }
 
