@@ -43,6 +43,9 @@ int main(){
             break;
         }
     }
+
+    delete longitude;
+    delete latitude; 
 }
 
 int storeNewLocation(int *xValues, int *yValues, int numOfElements, int capacity){
