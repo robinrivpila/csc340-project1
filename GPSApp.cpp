@@ -91,6 +91,7 @@ int removeLocation(int* xValues, int* yValues, int numOfElements, int capacity){
 }
 
 void showStoredLocations(int* xValues, int* yValues, int numOfElements){
+    cout << "Stored Locations: " << endl; 
     for(int i = 0; i< numOfElements; i++){
         cout << i+1 << ": " << xValues[i] << ", " << yValues[i] << endl; 
     }
