@@ -72,7 +72,7 @@ int removeLocation(int* xValues, int* yValues, int numOfElements, int capacity){
     showStoredLocations(xValues, yValues, numOfElements); 
     cout << "Which location would you like to remove? " << endl; 
     cin >> userInput; 
-    if(userInput <= capacity && userInput > 0 ){
+    if(userInput <= numOfElements && userInput > 0 ){
     int x = xValues[userInput-1];
     int y = yValues[userInput-1]; 
 
