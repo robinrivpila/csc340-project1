@@ -68,6 +68,7 @@ int storeNewLocation(int *xValues, int *yValues, int numOfElements, int capacity
 
 int removeLocation(int* xValues, int* yValues, int numOfElements, int capacity){
     int userInput; 
+    if(numOfElements > 0){
     cout << "The following locations are stored: " << endl; 
     showStoredLocations(xValues, yValues, numOfElements); 
     cout << "Which location would you like to remove? " << endl; 
@@ -90,13 +91,20 @@ int removeLocation(int* xValues, int* yValues, int numOfElements, int capacity){
     }else{
         cout << "Invalid user input!" << endl; 
     }
+    }else{
+        cout << "Currently no locations stored!" << endl; 
+    }
     return numOfElements; 
 }
 
 void showStoredLocations(int* xValues, int* yValues, int numOfElements){
+    if(numOfElements > 0){
     cout << "Stored Locations: " << endl; 
     for(int i = 0; i< numOfElements; i++){
         cout << i+1 << ": " << xValues[i] << ", " << yValues[i] << endl; 
+    }
+    }else{
+        cout << "Currently no locations stored!" << endl; 
     }
 }
 
